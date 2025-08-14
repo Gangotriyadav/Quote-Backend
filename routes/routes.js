@@ -3,7 +3,7 @@ const router = express.Router();
 const Model = require('../model/model');
 
 // Create a new data entry
-router.post('/post', async (req, res) => {
+router.post('/quotes', async (req, res) => {
   const data = new Model({
     quotes: req.body.quotes,
   });
@@ -15,6 +15,7 @@ router.post('/post', async (req, res) => {
     res.status(400).json({ message: error.message });
   }
 });
+
 
 // Get all data entries
 router.get('/getAll', async (req, res) => {
