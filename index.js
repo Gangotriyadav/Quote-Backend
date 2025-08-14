@@ -22,6 +22,11 @@ app.use(express.json());
 
 app.use(cors());
 
+app.get("/api/test", (req, res) => {
+  res.json({ message: "Backend is working!" });
+});
+
+
 app.use("/api", routes);
 
 const PORT = 5006;
